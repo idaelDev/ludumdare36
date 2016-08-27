@@ -38,6 +38,8 @@ public class Damageable : MonoBehaviour
 			{
 				this.Damage(projectile.damage);
 			}
+
+           
 		}
 	}
 }
