@@ -23,4 +23,13 @@ public class Projectile : MonoBehaviour
 
 		transform.Translate(translation.x, translation.y, 0);
 	}
+
+	void OnCollisionEnter2D(Collision2D coll) 
+	{
+		Debug.Log("I'm collided!");
+		if (coll.gameObject.tag == "ennemy") 
+		{
+			Destroy(gameObject);
+		}
+	}
 }
