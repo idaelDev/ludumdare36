@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EventListener : MonoBehaviour {
+public class EventListener : MonoBehaviour 
+{
 
     EventSender sender;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
         sender = GetComponent<EventSender>();
         sender.inputEvent += EventTrigger;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
 	}
 
