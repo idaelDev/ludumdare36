@@ -36,21 +36,8 @@ public class Damageable : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-	void Damage(int damageCount)
+	public void Damage(int damageCount)
 	{
 		actualLife -= damageCount;
-	}
-
-	void OnCollisionEnter2D(Collision2D coll) 
-	{
-		if (coll.gameObject.tag == "bullet") 
-		{
-			Projectile projectile = coll.gameObject.GetComponent<Projectile>();
-
-			if (projectile.shooter.tag != this.gameObject.tag) 
-			{
-				this.Damage(projectile.damage);
-			}
-		}
 	}
 }
