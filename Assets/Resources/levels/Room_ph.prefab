@@ -35,9 +35,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013281070766}
+  - 61: {fileID: 61000010175741630}
+  - 114: {fileID: 114000013113705448}
   m_Layer: 0
   m_Name: Room_ph
-  m_TagString: Untagged
+  m_TagString: room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,6 +71,31 @@ Transform:
   - {fileID: 4000010875604058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &61000010175741630
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013964605570}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 18, y: 10}
+--- !u!114 &114000013113705448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013964605570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49311b0f95063524880545490773ba01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000012730223068
 SpriteRenderer:
   m_ObjectHideFlags: 1
