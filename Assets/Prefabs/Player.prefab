@@ -24,6 +24,7 @@ GameObject:
   - 114: {fileID: 114000013041146396}
   - 60: {fileID: 60000010895829290}
   - 114: {fileID: 114000013634217796}
+  - 50: {fileID: 50000011988502556}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -38,12 +39,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011132287624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 1.007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000011988502556
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011132287624}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!60 &60000010895829290
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -76,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1000011221860906, guid: 50557dc10fccc4a96909bc3663bc36f2, type: 2}
+  fireEvery: 0.1
 --- !u!114 &114000013634217796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,7 +148,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 997d37704b90b4f95985cdea22372d2c, type: 3}
   m_Color: {r: 0.07586217, g: 1, b: 0, a: 1}
   m_FlipX: 0
