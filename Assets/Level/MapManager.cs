@@ -11,18 +11,11 @@ public class MapManager : MonoBehaviour {
     {
         map = new Map(10);
         rooms = Resources.LoadAll<GameObject>("levels");
+        Initmap();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown (KeyCode.B))
-        {
-            Initmap();
-            //foreach (Vector2 item in map.cellContainer.Keys)
-            //{
-            //    Debug.Log(item);
-            //}
-        }
     }
 
     private void Initmap()
