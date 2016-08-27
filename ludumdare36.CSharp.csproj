@@ -68,9 +68,13 @@
     <Compile Include="Assets\Level\Cell.cs" />
     <Compile Include="Assets\Level\Map.cs" />
     <Compile Include="Assets\Level\MapManager.cs" />
+    <Compile Include="Assets\Level\SpriteAnim.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\InputReactive.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\SimplePool.cs" />
+    <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
