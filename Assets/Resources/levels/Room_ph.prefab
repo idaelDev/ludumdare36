@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011650584356}
   - 212: {fileID: 212000012129325094}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - 114: {fileID: 114000011973759766}
   - 114: {fileID: 114000011723565938}
   - 58: {fileID: 58000013783324860}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret
   m_TagString: ennemy
   m_Icon: {fileID: 0}
@@ -438,6 +438,8 @@ MonoBehaviour:
   DownWall: {fileID: 61000010551953940}
   enemiesContainer: {fileID: 1000010959765264}
   cleared: 0
+  frontierDone: 0
+  nbEnnemies: 0
 --- !u!212 &212000012129325094
 SpriteRenderer:
   m_ObjectHideFlags: 1

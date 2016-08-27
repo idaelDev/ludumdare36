@@ -88,19 +88,31 @@ public class Room : MonoBehaviour {
             Vector3 pos = transform.position;
             if (playerPos.x > pos.x + 9)
             {
-                playerOutEvent(Directions.EAST);
+                if (playerOutEvent != null)
+                {
+                    playerOutEvent(Directions.EAST);
+                }
             }
             else if (playerPos.y < pos.y - 5)
             {
-                playerOutEvent(Directions.SOUTH);
+                if (playerOutEvent != null)
+                {
+                    playerOutEvent(Directions.SOUTH);
+                }
             }
             else if(playerPos.x < pos.x -9)
             {
-                playerOutEvent(Directions.WEST);
+                if (playerOutEvent != null)
+                {
+                    playerOutEvent(Directions.WEST);
+                }
             }
             else if(playerPos.y > pos.y + 5)
             {
-                playerOutEvent(Directions.NORTH);
+                if (playerOutEvent != null)
+                {
+                    playerOutEvent(Directions.NORTH);
+                }
             }
             //this.gameObject.SetActive(false);
         }
