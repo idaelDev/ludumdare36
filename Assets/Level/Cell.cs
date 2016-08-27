@@ -8,53 +8,31 @@ public class Cell {
 
     private static Cell[] directions = 
 	{
-		new Cell (0, 1), new Cell (1, 1), new Cell (1, 0), new Cell (1, -1),
-		new Cell (0, -1), new Cell (-1, -1), new Cell (-1, 0), new Cell (-1, 1)
+		new Cell (0, 1), new Cell (1, 0),
+		new Cell (0, -1),new Cell (-1, 0)
 	};
 
     private static float[] rotations =
     {
-        0.0f, 45.0f, 90.0f, 135.0f,
-        180.0f, 225.0f, 270, 315.0f
+        0.0f, 90.0f,
+        180.0f, 270
     };
 
     public Vector2 Coordinates { get; private set; }
 
-	private CellType type;
-
-	public CellType Type {
-		get {
-			return type;
-		}
-		set{
-			type = value;
-		}
-	}
-	
-
     public Cell()
     {
         Coordinates = Vector2.zero;
-        type = CellType.SEA;
     }
 
     public Cell(int p_x, int p_y)
     {
         Coordinates = new Vector2(p_x, p_y); 
-        type = CellType.SEA;
     }
 
     private Cell(Vector2 p_coordinates)
     {
         Coordinates = p_coordinates;
-    }
-
-    public bool Walkable
-    {
-        get
-        {
-            return type == CellType.SEA;
-        }
     }
 
     public int GetRelativeDirectionFrom(Cell c)
@@ -150,20 +128,14 @@ public class Cell {
     #endregion
 }
 
-public enum CellType
-{
-    SEA = 0,
-    LAND = 1
-}
-
 public enum Directions
 {
 	NORTH = 0,
-	NORTH_EAST = 1,
-	EAST = 2,
-	SOUTH_EAST = 3,
-	SOUTH = 4,
-	SOUTH_WEST = 5,
-	WEST = 6,
-	NORTH_WEST = 7
+	//NORTH_EAST = 1,
+	EAST = 1,
+	//SOUTH_EAST = 3,
+	SOUTH = 2,
+	//SOUTH_WEST = 5,
+	WEST = 3,
+	//NORTH_WEST = 7
 }

@@ -67,7 +67,7 @@
     <Compile Include="Assets\CodeExemple\EventSender.cs" />
     <Compile Include="Assets\Level\Cell.cs" />
     <Compile Include="Assets\Level\Map.cs" />
-    <Compile Include="Assets\Level\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Level\MapManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
