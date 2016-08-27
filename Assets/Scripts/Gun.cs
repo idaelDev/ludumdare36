@@ -21,6 +21,7 @@ public class Gun : MonoBehaviour
 		{
 			GameObject projectileInstance = Instantiate (projectile, transform.position, Quaternion.identity) as GameObject;
 			Projectile projectileSettings = projectileInstance.GetComponent<Projectile> ();
+			projectileSettings.shooter = this.gameObject;
 
 			// I'm not certain of the quality of this whole thing…
 			if (verticalFireAxis == 1.0F) {

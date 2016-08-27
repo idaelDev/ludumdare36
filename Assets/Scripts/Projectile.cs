@@ -6,6 +6,9 @@ public class Projectile : MonoBehaviour
 
 	public float velocity = 20.0F;
 	public Vector2 direction = Vector2.up;
+	public int damage = 5;
+
+	public GameObject shooter;
 
 	private new Transform transform;
 
@@ -26,10 +29,6 @@ public class Projectile : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
-		Debug.Log("I'm collided!");
-		if (coll.gameObject.tag == "ennemy") 
-		{
-			Destroy(gameObject);
-		}
+		Destroy(this.gameObject);
 	}
 }
