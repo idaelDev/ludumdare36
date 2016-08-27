@@ -38,6 +38,7 @@ public class GameManager : Singleton<GameManager> {
         exp += xp;
         if(exp >= maxExp)
         {
+            
             exp = 0;
             if(levelUpEvent != null)
             {
