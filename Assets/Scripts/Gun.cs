@@ -21,6 +21,7 @@ public class Gun : MonoBehaviour
 		{
 			GameObject projectileInstance = SimplePool.Spawn(projectile, transform.position, Quaternion.identity) as GameObject;
 			Projectile projectileSettings = projectileInstance.GetComponent<Projectile> ();
+            projectileInstance.layer = LayerMask.NameToLayer("PlayerShot");
 			projectileSettings.shooter = this.gameObject;
 
 			// I'm not certain of the quality of this whole thing…

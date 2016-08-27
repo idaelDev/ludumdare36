@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Room : MonoBehaviour {
 
+    public BoxCollider2D RightWall;
+    public BoxCollider2D LeftWall;
+    public BoxCollider2D UpWall;
+    public BoxCollider2D DownWall;
+
     public delegate void PlayerOut(Directions dir);
     public event PlayerOut playerOutEvent;
 
@@ -16,9 +21,16 @@ public class Room : MonoBehaviour {
 	
 	}
 
+    public void SetWalls(bool up, bool right, bool down, bool left)
+    {
+        RightWall.enabled = right;
+        LeftWall.enabled = left;
+        UpWall.enabled = up;
+        DownWall.enabled = down;
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exit");
         if(other.tag == "Player")
         {
             Vector3 playerPos = other.transform.position;

@@ -28,6 +28,15 @@ public class MapManager : MonoBehaviour {
     {
         currentRoom.gameObject.SetActive(true);
         currentRoom.playerOutEvent += SetCurrentRoom;
+        bool[] walls = { true, true, true, true};
+        for (int i = 0; i < 4; i++)
+        {
+            if (roomTable.ContainsKey(Cell.GetNeighbor(map.cellContainer[currentCoord] as Cell, i).Coordinates))
+            {
+                walls[i] = false;
+            }
+        }
+        currentRoom.SetWalls(walls[0], walls[1], walls[2], walls[3]);
     }
 
     private void SetCurrentRoom(Directions dir)
