@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000013698480916}
   - 114: {fileID: 114000013041146396}
   - 60: {fileID: 60000010895829290}
+  - 114: {fileID: 114000013634217796}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -49,7 +50,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011132287624}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -75,6 +76,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1000011221860906, guid: 50557dc10fccc4a96909bc3663bc36f2, type: 2}
+--- !u!114 &114000013634217796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011132287624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef47aa7b0210843f6a7a22e67bcc9f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 20
+  actualLife: 20
 --- !u!114 &114000013698480916
 MonoBehaviour:
   m_ObjectHideFlags: 1
