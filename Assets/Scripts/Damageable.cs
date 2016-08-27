@@ -5,6 +5,9 @@ public class Damageable : MonoBehaviour
 {
 	public int maxLife, actualLife;
 
+    public delegate void CharaDead();
+    public event CharaDead deadEvent;
+
 	// Use this for initialization
 	void Start () 
 	{ }
@@ -25,6 +28,11 @@ public class Damageable : MonoBehaviour
 
     public void Dead()
     {
+        if (deadEvent != null)
+        {
+            deadEvent();
+        }
+
         gameObject.SetActive(false);
     }
 
@@ -43,8 +51,6 @@ public class Damageable : MonoBehaviour
 			{
 				this.Damage(projectile.damage);
 			}
-
-           
 		}
 	}
 }

@@ -27,6 +27,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000010959765264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011669899512}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000011132190408
 GameObject:
   m_ObjectHideFlags: 1
@@ -124,7 +139,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1000013662114700
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -196,6 +211,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013598560700}
   m_RootOrder: 0
+--- !u!4 &4000011669899512
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010959765264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000013598560700}
+  m_Father: {fileID: 4000013281070766}
+  m_RootOrder: 2
 --- !u!4 &4000012132792884
 Transform:
   m_ObjectHideFlags: 1
@@ -265,7 +294,7 @@ Transform:
   m_Children:
   - {fileID: 4000010875604058}
   - {fileID: 4000013007553710}
-  - {fileID: 4000013598560700}
+  - {fileID: 4000011669899512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000013598560700
@@ -280,8 +309,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011650584356}
-  m_Father: {fileID: 4000013281070766}
-  m_RootOrder: 2
+  m_Father: {fileID: 4000011669899512}
+  m_RootOrder: 0
 --- !u!58 &58000013783324860
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -407,6 +436,8 @@ MonoBehaviour:
   LeftWall: {fileID: 61000011886877854}
   UpWall: {fileID: 61000011045221934}
   DownWall: {fileID: 61000010551953940}
+  enemiesContainer: {fileID: 1000010959765264}
+  cleared: 0
 --- !u!212 &212000012129325094
 SpriteRenderer:
   m_ObjectHideFlags: 1
