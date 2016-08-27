@@ -19,9 +19,14 @@ public class Damageable : MonoBehaviour
 
 		if (actualLife <= 0) 
 		{
-			Destroy(this.gameObject);
+            Dead();
 		}
 	}
+
+    public void Dead()
+    {
+        gameObject.SetActive(false);
+    }
 
 	void Damage(int damageCount)
 	{

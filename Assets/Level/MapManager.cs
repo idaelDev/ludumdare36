@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MapManager : MonoBehaviour {
+public class MapManager : Singleton<MapManager> {
 
     public int roomNumber = 10;
 
@@ -9,6 +9,7 @@ public class MapManager : MonoBehaviour {
     private GameObject[] rooms;
     private Vector2 currentCoord;
     private Room currentRoom;
+    private Room previousRoom;
     Hashtable roomTable;
 
     // Use this for initialization
@@ -39,8 +40,17 @@ public class MapManager : MonoBehaviour {
         currentRoom.SetWalls(walls[0], walls[1], walls[2], walls[3]);
     }
 
+    public void endOfCameraAnim()
+    {
+        if(previousRoom != null)
+        {
+            previousRoom.gameObject.SetActive(false);
+        }
+    }
+
     private void SetCurrentRoom(Directions dir)
     {
+        previousRoom = currentRoom;
         currentRoom.playerOutEvent -= SetCurrentRoom;
         Cell c = Cell.GetNeighbor(map.cellContainer[currentCoord] as Cell, dir);
         currentCoord = c.Coordinates;

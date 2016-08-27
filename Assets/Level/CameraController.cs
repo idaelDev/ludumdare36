@@ -5,6 +5,7 @@ public class CameraController : Singleton<CameraController> {
 
     public float movementDuration = 0.5f;
 
+
     public void SetPosition(Vector2 position)
     {
         Vector3 end = new Vector3(position.x, position.y, transform.position.z);
@@ -21,5 +22,6 @@ public class CameraController : Singleton<CameraController> {
             yield return 0;
         }
         transform.position = endPosition;
+        MapManager.Instance.endOfCameraAnim();
     }
 }

@@ -51,7 +51,7 @@ public class Room : MonoBehaviour {
             {
                 playerOutEvent(Directions.NORTH);
             }
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
     }
 }
