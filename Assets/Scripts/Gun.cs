@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
 
 		if (verticalFireAxis != 0 || horizontalFireAxis != 0) 
 		{
-			GameObject projectileInstance = Instantiate (projectile, transform.position, Quaternion.identity) as GameObject;
+			GameObject projectileInstance = SimplePool.Spawn(projectile, transform.position, Quaternion.identity) as GameObject;
 			Projectile projectileSettings = projectileInstance.GetComponent<Projectile> ();
 			projectileSettings.shooter = this.gameObject;
 
