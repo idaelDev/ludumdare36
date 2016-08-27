@@ -5,7 +5,7 @@ public class InputReactive : MonoBehaviour
 {
 	public float movementSpeed = 10.0F;
 
-	private Transform transform;
+	private new Transform transform;
 
 	// Use this for initialization
 	void Start () 
