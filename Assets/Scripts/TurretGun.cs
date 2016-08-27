@@ -8,6 +8,7 @@ public class TurretGun : MonoBehaviour
 	private Vector2[] directions = new Vector2[4] {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 	private int index = 0;
 
+	public float fireEvery = 1.0F;
 	private float timer = 0.0F;
 
 	// Use this for initialization
@@ -20,7 +21,7 @@ public class TurretGun : MonoBehaviour
 	void Update () 
 	{
 		timer += Time.deltaTime;
-		if (timer >= 1.0F) 
+		if (timer >= this.fireEvery) 
 		{
 			timer = 0.0F;
 
