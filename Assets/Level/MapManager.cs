@@ -12,6 +12,8 @@ public class MapManager : Singleton<MapManager> {
     private Room previousRoom;
     Hashtable roomTable;
 
+    public GameObject baseRoom;
+
     // Use this for initialization
     void Start()
     {
@@ -78,8 +80,16 @@ public class MapManager : Singleton<MapManager> {
         Debug.Log("Map Generated");
         foreach(Cell item in map.cellContainer.Values)
         {
+            GameObject drawable;
+            if (item.Coordinates == Vector2.zero)
+            {
+                drawable = baseRoom;
+            }
+            else
+            {
+                drawable = rooms[(int)(Random.Range(0, rooms.Length - 0.01f))];
+            }
             Vector2 pos = new Vector2(item.Coordinates.x * 18, item.Coordinates.y * 10);
-            GameObject drawable = rooms[(int)(Random.Range(0, rooms.Length - 0.01f))];
             GameObject roomInstance = Instantiate(drawable, pos, Quaternion.identity)as GameObject;
             roomInstance.SetActive(false);
             roomTable.Add(item.Coordinates, roomInstance);

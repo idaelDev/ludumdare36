@@ -19,6 +19,8 @@ public class GameManager : Singleton<GameManager> {
     public int roomToClear;
     public int level;
 
+    public bool canMove = false;
+
     private bool levelstarted = true;
 
 	// Use this for initialization
@@ -41,6 +43,7 @@ public class GameManager : Singleton<GameManager> {
         roomToClear = roomNumber;
         MapManager.Instance.Init(roomNumber);
         levelstarted = true;
+        canMove = true;
     }
 
     public void RoomCleared()

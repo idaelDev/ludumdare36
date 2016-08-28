@@ -8,6 +8,7 @@ public class CameraController : Singleton<CameraController> {
 
     public void SetPosition(Vector2 position)
     {
+        GameManager.Instance.canMove = false;
         Vector3 end = new Vector3(position.x, position.y, transform.position.z);
         StartCoroutine(movementCoroutine(transform.position, end, movementDuration));
     }

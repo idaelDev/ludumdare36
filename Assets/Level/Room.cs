@@ -60,6 +60,7 @@ public class Room : MonoBehaviour {
             }
 
         }
+        GameManager.Instance.canMove = true;
     }
 
     public void EndRoom()

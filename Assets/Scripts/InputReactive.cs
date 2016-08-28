@@ -57,6 +57,7 @@ public class InputReactive : MonoBehaviour
         horizontalTranslation *= Time.deltaTime;
 		verticalTranslation *= Time.deltaTime;
 
-		transform.Translate(horizontalTranslation, verticalTranslation, 0);
+        if(GameManager.Instance.canMove)
+		    transform.Translate(horizontalTranslation, verticalTranslation, 0);
 	}
 }
