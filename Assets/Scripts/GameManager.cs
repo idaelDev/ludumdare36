@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager> {
 
@@ -14,11 +15,49 @@ public class GameManager : Singleton<GameManager> {
     public delegate void LevelUp();
     public event LevelUp levelUpEvent;
 
+    public int roomNumber = 10;
+    public int roomToClear;
+    public int level;
+
+    private bool levelstarted = true;
+
 	// Use this for initialization
 	void Start () {
+        DontDestroyOnLoad(this.gameObject);
+	}
+
+    void Update()
+    {
+        if(!levelstarted && SceneManager.GetSceneByName("Main").isLoaded)
+        {
+            StartLevel();
+        }
+    }
+
+    public void StartLevel()
+    {
         health = maxHealth;
         exp = maxExp;
-	}
+        roomToClear = roomNumber;
+        MapManager.Instance.Init(roomNumber);
+        levelstarted = true;
+    }
+
+    public void RoomCleared()
+    {
+        roomToClear--;
+        if (roomToClear <= 0)
+        {
+            NextLevel();
+        }
+    }
+
+    public void NextLevel()
+    {
+        levelstarted = false;
+        SceneManager.LoadScene("Main",LoadSceneMode.Single);
+        
+    }
 
     public void TakeDamage(int damage)
     {
@@ -46,6 +85,4 @@ public class GameManager : Singleton<GameManager> {
             }
         }
     }
-
-
 }

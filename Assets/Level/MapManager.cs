@@ -15,6 +15,12 @@ public class MapManager : Singleton<MapManager> {
     // Use this for initialization
     void Start()
     {
+
+    }
+
+    public void Init(int nb)
+    {
+        roomNumber = nb;
         map = new Map(roomNumber);
         roomTable = new Hashtable(roomNumber);
         rooms = Resources.LoadAll<GameObject>("levels");
@@ -66,6 +72,8 @@ public class MapManager : Singleton<MapManager> {
 
     private void Initmap()
     {
+
+
         map.mapGeneration();
         Debug.Log("Map Generated");
         foreach(Cell item in map.cellContainer.Values)
