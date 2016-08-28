@@ -212,9 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40fdd88093fc144049d3bc0d63848c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 1000014214868598, guid: 2faffe9182e9847aba5ab650e3a9d0c2, type: 2}
   directionIndicator: {fileID: 1000010784905954}
-  fireEvery: 0.5
+  fireEvery: 0.2
 --- !u!114 &114000013634217796
 MonoBehaviour:
   m_ObjectHideFlags: 1
