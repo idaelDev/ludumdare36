@@ -21,7 +21,7 @@ public class InputReactive : MonoBehaviour
 		float horizontalTranslation = Input.GetAxis ("Horizontal") * movementSpeed;
 		float verticalTranslation = Input.GetAxis("Vertical") * movementSpeed;
 
-		horizontalTranslation *= Time.deltaTime;
+        horizontalTranslation *= Time.deltaTime;
 		verticalTranslation *= Time.deltaTime;
 
 		transform.Translate(horizontalTranslation, verticalTranslation, 0);
