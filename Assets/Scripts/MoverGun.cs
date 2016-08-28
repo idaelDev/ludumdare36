@@ -6,7 +6,6 @@ public class MoverGun : MonoBehaviour
 	public GameObject projectile;
 
 	private Vector2[] directions = new Vector2[8] {Vector2.up, new Vector2(1,1), Vector2.right,new Vector2(1, -1), Vector2.down, new Vector2(-1, -1), Vector2.left, new Vector2(-1, 1) };
-	private int index = 0;
 
 	public float fireEvery = 1.0F;
 	private float timer = 0.0F;
