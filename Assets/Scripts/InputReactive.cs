@@ -5,6 +5,8 @@ public class InputReactive : MonoBehaviour
 {
 	public float movementSpeed = 10.0F;
 
+	public GameObject hoverBoard;
+
 	private new Transform transform;
 
 	// Use this for initialization
