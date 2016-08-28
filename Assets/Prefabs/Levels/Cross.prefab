@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011148211008}
+  - 60: {fileID: 60000012007713256}
   m_Layer: 0
   m_Name: Cross
   m_TagString: Untagged
@@ -69,6 +70,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011148211008}
   m_RootOrder: 0
+--- !u!60 &60000012007713256
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010925499094}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.48845762, y: -1.4635253}
+      - {x: -0.4912144, y: -0.48414862}
+      - {x: -1.449399, y: -0.51010555}
+      - {x: -1.4487374, y: 0.513821}
+      - {x: -0.5253253, y: 0.49879956}
+      - {x: -0.51490355, y: 1.4968835}
+      - {x: 0.50076175, y: 1.4967327}
+      - {x: 0.48009413, y: 0.5025609}
+      - {x: 1.503226, y: 0.5001527}
+      - {x: 1.49037, y: -0.49045777}
+      - {x: 0.4846977, y: -0.49045765}
+      - {x: 0.4824605, y: -1.4536781}
 --- !u!212 &212000014150972074
 SpriteRenderer:
   m_ObjectHideFlags: 1

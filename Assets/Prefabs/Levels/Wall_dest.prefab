@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012101328618}
+  - 61: {fileID: 61000012008037322}
   m_Layer: 0
   m_Name: Wall_dest
   m_TagString: Untagged
@@ -69,6 +70,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012101328618}
   m_RootOrder: 0
+--- !u!61 &61000012008037322
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013798710320}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.02890101, y: 0.028901339}
+  serializedVersion: 2
+  m_Size: {x: 0.47978193, y: 2.9363675}
 --- !u!212 &212000014040492814
 SpriteRenderer:
   m_ObjectHideFlags: 1

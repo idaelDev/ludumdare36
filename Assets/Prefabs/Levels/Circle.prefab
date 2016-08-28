@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010449191156}
+  - 58: {fileID: 58000010849995446}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -69,6 +70,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010449191156}
   m_RootOrder: 0
+--- !u!58 &58000010849995446
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010441518956}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.0946443
 --- !u!212 &212000012366511494
 SpriteRenderer:
   m_ObjectHideFlags: 1

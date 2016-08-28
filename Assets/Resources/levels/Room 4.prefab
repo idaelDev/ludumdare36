@@ -936,6 +936,7 @@ MonoBehaviour:
   UpWall: {fileID: 61000012428282056}
   DownWall: {fileID: 61000012671249316}
   enemiesContainer: {fileID: 1000013031210556}
+  decor: {fileID: 1000011886160076}
   cleared: 0
   frontierDone: 0
   nbEnnemies: 0

@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012615384084}
+  - 60: {fileID: 60000011187863278}
   m_Layer: 0
   m_Name: Angle_dest
   m_TagString: Untagged
@@ -69,6 +70,26 @@ Transform:
   - {fileID: 4000012287778402}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!60 &60000011187863278
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012900930590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -1.0724831, y: -0.66712725}
+      - {x: 0.926004, y: -0.6661794}
+      - {x: 1.5244634, y: -1.0183134}
+      - {x: -1.493469, y: -1.0107713}
+      - {x: -1.4903703, y: 0.805017}
+      - {x: -1.0890989, y: 0.5638645}
 --- !u!212 &212000012281546210
 SpriteRenderer:
   m_ObjectHideFlags: 1

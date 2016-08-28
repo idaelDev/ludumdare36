@@ -11,7 +11,8 @@ public class SpawnObject : MonoBehaviour {
         if (!isSpawned)
         {
             SpriteRenderer sr = GetComponent<SpriteRenderer>();
-            sr.enabled = false;
+            if(sr != null)
+                sr.enabled = false;
 
             SpriteRenderer[] srt = GetComponentsInChildren<SpriteRenderer>();
             foreach (SpriteRenderer item in srt)

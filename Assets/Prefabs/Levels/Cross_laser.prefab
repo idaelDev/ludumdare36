@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010807588710}
+  - 60: {fileID: 60000012156477352}
   m_Layer: 0
   m_Name: Cross_laser
   m_TagString: Untagged
@@ -69,6 +70,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010807588710}
   m_RootOrder: 0
+--- !u!60 &60000012156477352
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011007317540}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.021237267, y: -1.4953814}
+      - {x: -0.033851802, y: -0.04047036}
+      - {x: -1.498474, y: -0.058934856}
+      - {x: -1.5024127, y: 0.033480346}
+      - {x: -0.047408164, y: 0.030839507}
+      - {x: -0.015655816, y: 1.5009665}
+      - {x: 0.08136231, y: 1.4942527}
+      - {x: 0.09328699, y: 0.029937387}
+      - {x: 1.5138445, y: 0.04355091}
+      - {x: 1.5647004, y: -0.033855986}
+      - {x: 0.10242635, y: -0.065711856}
+      - {x: 0.078951836, y: -1.4961526}
 --- !u!212 &212000012270090834
 SpriteRenderer:
   m_ObjectHideFlags: 1

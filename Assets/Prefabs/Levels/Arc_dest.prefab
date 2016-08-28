@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013041552738}
+  - 60: {fileID: 60000011226096220}
   m_Layer: 0
   m_Name: Arc_dest
   m_TagString: Untagged
@@ -69,6 +70,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013041552738}
   m_RootOrder: 0
+--- !u!60 &60000011226096220
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010408765924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -1.4122798, y: 1.5096949}
+      - {x: -0.68921304, y: 1.3934829}
+      - {x: 0.02202721, y: 1.1106627}
+      - {x: 0.49737316, y: 0.75250334}
+      - {x: 0.8979634, y: 0.29839835}
+      - {x: 1.2769876, y: -0.47328326}
+      - {x: 1.4585142, y: -1.4142798}
+      - {x: 0.79263794, y: -1.3930424}
+      - {x: 0.6986787, y: -0.63112664}
+      - {x: 0.287529, y: 0.147851}
+      - {x: -0.473051, y: 0.6689602}
+      - {x: -1.4182768, y: 0.93551713}
 --- !u!212 &212000013278569060
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011134781696}
+  - 58: {fileID: 58000012194318476}
   m_Layer: 0
   m_Name: Circle_laser
   m_TagString: Untagged
@@ -69,6 +70,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011134781696}
   m_RootOrder: 0
+--- !u!58 &58000012194318476
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013393809964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5193902
 --- !u!212 &212000012043860172
 SpriteRenderer:
   m_ObjectHideFlags: 1
