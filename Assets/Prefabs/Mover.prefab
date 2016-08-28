@@ -38,6 +38,8 @@ GameObject:
   - 114: {fileID: 114000013051275188}
   - 58: {fileID: 58000012647671128}
   - 114: {fileID: 114000013040353386}
+  - 114: {fileID: 114000013348088784}
+  - 50: {fileID: 50000010026267914}
   m_Layer: 11
   m_Name: Mover
   m_TagString: ennemy
@@ -72,6 +74,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011135174684}
   m_RootOrder: 0
+--- !u!50 &50000010026267914
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013616797440}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &58000012647671128
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -112,6 +131,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 15
   actualLife: 15
+--- !u!114 &114000013348088784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013616797440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53aaacacd8f0ba4e9f43207ff0d67a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!212 &212000012287474004
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -16,13 +16,14 @@ public class MoverMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 translation = direction * speed * Time.deltaTime;
+        Debug.DrawLine(transform.position, transform.position + direction,Color.red);
         transform.Translate(translation);
 	}
 
     void OnCollisionEnter2D(Collision2D other)
     {
         Vector2 v = new Vector2(transform.position.x, transform.position.y);
-        direction = Vector2.Reflect( v -  other.contacts[0].point, direction);
+        direction = Vector2.Reflect(direction, other.contacts[0].normal);
     }
 
 }

@@ -10,6 +10,8 @@ public class Room : MonoBehaviour {
 
     public GameObject enemiesContainer;
 
+    private SpawnObject[] spawners;
+
     public delegate void PlayerOut(Directions dir);
     public event PlayerOut playerOutEvent;
 
@@ -21,28 +23,42 @@ public class Room : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Damageable[] enemies = enemiesContainer.GetComponentsInChildren<Damageable>();
-        nbEnnemies = enemies.Length ;
-        if(nbEnnemies == 0)
-        {
-            cleared = true;
-            EndRoom();
-        }
-        else
-        {
-            foreach (Damageable item in enemies)
-            {
-                item.deadEvent += UpdateEnemies;
-            }
-        }
+        spawners = GetComponentsInChildren<SpawnObject>();
+
+
 	}
 	
     public void InitRoom()
     {
+
         SetWalls(true, true, true, true);
-        if(cleared)
+
+        if (cleared)
         {
             EndRoom();
+        }
+        else
+        {
+            foreach (SpawnObject item in spawners)
+            {
+                item.Spawn();
+            }
+
+            Damageable[] enemies = enemiesContainer.GetComponentsInChildren<Damageable>();
+            nbEnnemies = enemies.Length;
+            if (nbEnnemies == 0)
+            {
+                cleared = true;
+                EndRoom();
+            }
+            else
+            {
+                foreach (Damageable item in enemies)
+                {
+                    item.deadEvent += UpdateEnemies;
+                }
+            }
+
         }
     }
 
