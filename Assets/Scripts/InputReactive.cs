@@ -6,6 +6,7 @@ public class InputReactive : MonoBehaviour
 	public float movementSpeed = 10.0F;
 
 	public GameObject hoverBoard;
+	public GameObject catBody;
 
 	private new Transform transform;
 
@@ -23,13 +24,17 @@ public class InputReactive : MonoBehaviour
 
 		if (horizontalTranslation > 0.0F) {
 			hoverBoard.transform.localEulerAngles = new Vector3 (0, 0, 90);
+			catBody.transform.localEulerAngles = new Vector3 (0, 0, 90);
 		} else if (horizontalTranslation < 0.0F) {
 			hoverBoard.transform.localEulerAngles = new Vector3 (0, 0, -90);
+			catBody.transform.localEulerAngles = new Vector3 (0, 0, -90);
 		}
 		if (verticalTranslation > 0.0F) {
 			hoverBoard.transform.localEulerAngles = new Vector3 (0, 0, 180);
+			catBody.transform.localEulerAngles = new Vector3 (0, 0, 180);
 		} else if (verticalTranslation < 0.0F) {
 			hoverBoard.transform.localEulerAngles = new Vector3 (0, 0, 360);
+			catBody.transform.localEulerAngles = new Vector3 (0, 0, 360);
 		}
 
 		horizontalTranslation *= movementSpeed;
