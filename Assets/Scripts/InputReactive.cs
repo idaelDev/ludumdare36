@@ -8,6 +8,9 @@ public class InputReactive : MonoBehaviour
 	public GameObject hoverBoard;
 	public GameObject catBody;
 
+	public Animator headAnimator;
+	public Animator boardAnimator;
+
 	private new Transform transform;
 
 	// Use this for initialization
@@ -21,6 +24,17 @@ public class InputReactive : MonoBehaviour
 	{
 		float horizontalTranslation = Input.GetAxis ("Horizontal");
 		float verticalTranslation = Input.GetAxis("Vertical");
+
+		if (horizontalTranslation != 0.0F || verticalTranslation != 0.0F) 
+		{
+			headAnimator.SetBool ("Moving", true);
+			boardAnimator.SetBool ("Moving", true);
+		} 
+		else 
+		{
+			headAnimator.SetBool ("Moving", false);
+			boardAnimator.SetBool ("Moving", false);
+		}
 
 		if (horizontalTranslation > 0.0F) {
 			hoverBoard.transform.localEulerAngles = new Vector3 (0, 0, 90);
