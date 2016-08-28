@@ -42,6 +42,7 @@ public class MapManager : Singleton<MapManager> {
 
     public void endOfCameraAnim()
     {
+        currentRoom.InitRoom();
         if(previousRoom != null)
         {
             previousRoom.gameObject.SetActive(false);

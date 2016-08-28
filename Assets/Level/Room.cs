@@ -14,6 +14,8 @@ public class Room : MonoBehaviour {
     public event PlayerOut playerOutEvent;
 
     public bool cleared = false;
+    public bool frontierDone = false;
+    bool[] walls = { false, false, false, false };
 
     public int nbEnnemies = 0;
 
@@ -24,6 +26,7 @@ public class Room : MonoBehaviour {
         if(nbEnnemies == 0)
         {
             cleared = true;
+            EndRoom();
         }
         else
         {
@@ -34,12 +37,27 @@ public class Room : MonoBehaviour {
         }
 	}
 	
+    public void InitRoom()
+    {
+        SetWalls(true, true, true, true);
+        if(cleared)
+        {
+            EndRoom();
+        }
+    }
+
+    public void EndRoom()
+    {
+        SetWalls(walls[0], walls[1], walls[2], walls[3]);
+    }
+
     private void UpdateEnemies()
     {
         nbEnnemies--;
         if(nbEnnemies <= 0)
         {
             cleared = true;
+            EndRoom();
             Debug.Log("Room Cleared");
         }
     }
@@ -47,10 +65,19 @@ public class Room : MonoBehaviour {
 
     public void SetWalls(bool up, bool right, bool down, bool left)
     {
-        RightWall.enabled = right;
-        LeftWall.enabled = left;
+        if(!frontierDone)
+        {
+            walls[0] = up;
+            walls[1] = right;
+            walls[2] = down;
+            walls[3] = left;
+            frontierDone = true;
+        }
+
         UpWall.enabled = up;
+        RightWall.enabled = right;
         DownWall.enabled = down;
+        LeftWall.enabled = left;
     }
 
     void OnTriggerExit2D(Collider2D other)
